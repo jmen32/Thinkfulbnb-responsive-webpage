@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  max-width: 100%;
+  width: 100%;
   padding-bottom: 20px;
 }
 
@@ -62,7 +62,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 50px;
   color: #fff;
 }
 
@@ -113,7 +113,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 40%;
 }
 
 form button {
