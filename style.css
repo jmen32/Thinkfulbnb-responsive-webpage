@@ -32,7 +32,6 @@ section.alternate-background {
 
 main img {
   width: 100%;
-  padding-bottom: 20px;
 }
 
 /* ---  Groups & Items --- */
@@ -55,9 +54,8 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -66,14 +64,9 @@ header {
   color: #fff;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
-}
-
 header nav ul {
   display: flex;
-  padding: 0;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -83,7 +76,11 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 10px 0 0;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 20px;
 }
 
 header nav ul li a:hover {
@@ -98,37 +95,26 @@ form {
   justify-content: space-between;
   border: 2px solid #ff385c;
   padding: 10px;
-  flex-wrap: wrap;
 }
 
 form label {
   font-weight: bold;
 }
 
-#stay .item {
-  display: flex;
-  justify-content: space-between;
-}
-
 form select,
 form input {
   margin-bottom: 20px;
-  width: 40%;
+  width: 65%;
+  float: right;
 }
 
 form button {
-  justify-content: center;
   background-color: #ff385c;
   border: none;
   color: #fff;
   font-size: 24px;
   padding: 15px;
   width: 100%;
-}
-
-/* --------  Host  ---------- */
-ul {
-  padding-bottom: 20px;
 }
 
 /* -------  Footer ------- */
@@ -145,32 +131,34 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
-  /* ---------  nav  --------- */
+@media all and (min-width: 600px) {
   header {
+    background-color: #ff385c;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin: 0;
-    padding: 10px;
   }
 
   header nav {
-    padding-top: 15px;
+    padding: 10px;
   }
 
-  /* ------------  search form desktop  ------------- */
   form {
-    /* display: flex; */
     flex-direction: row;
-    /* justify-content: space-around;
-    padding: 0; */
   }
 
-  form .item {
+  .group {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .vacation-form .item {
+    display: flex block;
     flex: 1 1 auto;
     flex-direction: column;
-    justify-content: center;
   }
 
   .item label,
@@ -181,44 +169,16 @@ footer p {
     width: 100%;
   }
 
-  /* ------  about  ------ */
-  #about .container {
+  .grid-column {
     display: flex;
-    align-items: center;
-    padding: 0;
-  }
-
-  #about .container .group {
-    flex-direction: row;
     flex: 1;
-  }
-
-  #about .container .group .item img {
-    padding: 0;
-  }
-
-  /* -----  Ideas  ----- */
-
-  #ideas div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #ideas div .item {
     flex-direction: column;
-  }
-
-  /* -----  host  ----- */
-  #host .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  #host .item {
-    flex: 1;
     margin: 10px;
+  }
+
+  .grid-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
   }
 }
